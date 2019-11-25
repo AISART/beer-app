@@ -10,7 +10,7 @@ import {AppSettingsService} from './services/app-settings.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
