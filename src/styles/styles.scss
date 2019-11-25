@@ -23,6 +23,7 @@ body {
   font-weight: 400;
   background: #FFFFFF;
   color: #a5a5a5;
+  overflow-x: hidden;
 }
 
 div {
@@ -113,4 +114,6 @@ h1, h2, h3, h4, h5, h6 {
 
 // COMPONENTS
 @import 'components/heading';
+@import 'components/beer-overview';
+@import 'components/beer-product';
 

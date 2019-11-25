@@ -1,0 +1,23 @@
+.section-title-container {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+
+  .section-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ff9711;
+    line-height: 0.75;
+  }
+  .section-title {
+    font-size: 72px;
+    font-weight: 400;
+    color: #262626;
+    line-height: 1.1;
+    margin-top: 3px;
+  }
+  .section-title span {
+    font-weight: 600;
+  }
+
+}

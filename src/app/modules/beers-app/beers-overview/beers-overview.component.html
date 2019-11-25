@@ -1,6 +1,26 @@
-<app-menu-bar></app-menu-bar>
-<app-heading></app-heading>
 <div class="container">
+  <div class="row">
+    <div class="section-title-container">
+      <div class="section-subtitle">Het bieren overzicht</div>
+      <div class="section-title">Zoek en kies</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="filter-menu-container">
+      <mat-form-field>
+        <input matInput placeholder="Zoek op bier naam">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Type">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Alcoholpercentage">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Brouwerij">
+      </mat-form-field>
+    </div>
+  </div>
   <div class="row">
     <div class="col-sm-4 col-md-3" *ngFor="let beer of beers">
       <app-beers-product [beer]="beer"></app-beers-product>

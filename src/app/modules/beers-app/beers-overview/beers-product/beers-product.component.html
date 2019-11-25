@@ -1,31 +1,23 @@
-{{beer.Bier}}
-{{beer.Stamwortgehalte}}
-{{beer.Alcoholpercentage}}
-{{beer.Gisting}}
-{{beer.Sinds}}
-<div class="thumbnail" >
-  <h4 class="text-center">
-    <span class="label label-info">{{beer.Brouwerij}}</span>
-  </h4>
-  <img src="http://placehold.it/650x450&text=Galaxy S5" class="img-responsive w-100">
-  <div class="caption">
-    <div class="row">
-      <div class="col-md-6 col-xs-6">
-        <h3>{{beer.Bier}}</h3>
-      </div>
-      <div class="col-md-6 col-xs-6 price">
-        <h3>
-          <label>{{beer.Alcoholpercentage}}</label></h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <a class="btn btn-primary btn-product"><span class="glyphicon glyphicon-thumbs-up"></span> Like</a>
-      </div>
-      <div class="col-md-6">
-        <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</a></div>
-    </div>
-
-    <p> </p>
+<div class="beer-container">
+  <div class="beer-image" style="background-image:url('../../../../../assets/images/beer-image.jpg')"></div>
+  <div class="beer-title">
+    {{beer.Bier}}
+  </div>
+  <div class="beer-promile">
+    Alcoholpercentage: <span>{{beer.Alcoholpercentage}}</span>
+  </div>
+  <div class="beer-content">
+    <p>
+      Bier <span>{{beer.Bier}}</span> en
+      is gebrouwen op <span>{{beer.Sinds}} </span>
+      en verkrijbaar bij <span>{{beer.Brouwerij}}</span>.
+      Dit biertje bevat <span>{{beer.Alcoholpercentage}} </span>
+      alcohol percentage. Het <span>{{beer.Bier}} </span>
+      heeft een <span>{{beer.Gisting}} </span> gisting niveau.
+      De Stamwortel gehalte is <span>{{beer.Stamwortgehalte}}</span>
+    </p>
+  </div>
+  <div class="beer-button">
+    <a href="#">Ik kies deze!</a>
   </div>
 </div>

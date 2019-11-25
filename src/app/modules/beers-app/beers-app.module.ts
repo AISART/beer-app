@@ -5,12 +5,18 @@ import { BeersOverviewComponent } from './beers-overview/beers-overview.componen
 import {CommonModule} from '@angular/common';
 import { BeersProductComponent } from './beers-overview/beers-product/beers-product.component';
 import {SharedCoreModule} from '../../core/modules/shared-core.module';
+import {MatIconModule, MatInputModule, MatOptionModule, MatSelectModule} from '@angular/material';
 
 @NgModule({
   imports: [
     BeersAppRoutingModule,
     CommonModule,
-    SharedCoreModule
+    SharedCoreModule,
+    MatSelectModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatIconModule,
   ],
   exports: [],
   declarations: [
