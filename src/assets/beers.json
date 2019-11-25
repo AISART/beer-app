@@ -1,5 +1,4 @@
-{
-  "bieren": [
+[
     {
       "id": 1,
       "Bier": "1410",
@@ -4950,5 +4949,4 @@
       "Sinds": null,
       "Brouwerij": "Dampegheest"
     }
-  ]
-}
+]
