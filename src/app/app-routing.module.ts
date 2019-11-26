@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './modules/beers-app/beers-app.module#BeersAppModule',
+    loadChildren: './modules/beers-app/beers-app.module#BeersAppModule'
   },
   {path: '**', redirectTo: '/beers'}
 ];

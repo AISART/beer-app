@@ -1,0 +1,87 @@
+@import '../mixins';
+@import '../variables';
+
+.inner-form {
+  width: 100%;
+  margin-bottom: 17px;
+
+  .input-field {
+    height: 70px;
+    width: 100%;
+    position: relative;
+
+    input {
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      border: 0;
+      background: $main-gray;
+      display: block;
+      width: 100%;
+      padding: 10px 32px 10px 70px;
+      font-size: 18px;
+      color: $main-orange;
+      border-radius: 34px;
+
+      .placeholder {
+        color: #ccc;
+        font-size: 18px;
+      }
+    }
+
+    .btn-search {
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+      width: 70px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      height: 100%;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      pointer-events: none;
+
+      svg {
+        fill: $main-orange;
+        width: 30px;
+        height: 30px;
+        transition: all .2s ease-out, color .2s ease-out;
+      }
+    }
+  }
+}
+
+
+.inner-form .input-field input:-moz-placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.inner-form .input-field input::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.inner-form .input-field input:hover,
+.inner-form .input-field input:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+
+.inner-form .input-field .btn-search:hover,
+.inner-form .input-field .btn-search:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.inner-form .input-field .btn-search:hover svg,
+.inner-form .input-field .btn-search:focus svg {
+  fill: #666;
+}

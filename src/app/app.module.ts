@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {AppSettingsService} from './services/app-settings.service';
+import {BeerResolver} from './resolvers/beer.resolver';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {AppSettingsService} from './services/app-settings.service';
   ],
   providers: [
     HttpClient,
-    AppSettingsService
+    AppSettingsService,
+    BeerResolver
   ],
   bootstrap: [AppComponent]
 })

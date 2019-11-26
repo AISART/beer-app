@@ -1,17 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
+import {Beer} from '../models/beers';
 
 @Injectable()
 export class AppSettingsService {
-
   constructor(private http: HttpClient) {
-    this.getJSON().subscribe(data => {
-      console.log(data);
-    });
   }
 
-  public getJSON(): Observable<any> {
-    return this.http.get('../../assets/beers.json');
+  public getJSON(): Observable<Beer[]> {
+    return this.http.get<Beer[]>('../../assets/beers.json');
   }
 }

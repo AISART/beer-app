@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="section-title-container">
+      <div class="section-subtitle">Hieronder zie je wat je gekozen hebt</div>
+      <div class="section-title">Goed gedaan!</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="back-button">
+      <a [routerLink]="['/beers']">Terug om meer te bestellen</a>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let beer of cart" >
+  <div class="container">
+      <div class="shopping-container">
+        <div class="row">
+        <div class="col-sm-6">
+          <div class="shopping-content">
+            <div class="beer-title">
+              {{beer.Bier}}
+            </div>
+            <div class="beer-promile">
+              Alcoholpercentage: <span>{{beer.Alcoholpercentage}}</span>
+            </div>
+            <div class="beer-content">
+              <p>
+                Bier <span>{{beer.Bier}}</span> en
+                is gebrouwen op <span>{{beer.Sinds}} </span>
+                en verkrijbaar bij <span>{{beer.Brouwerij}}</span>.
+                Dit biertje bevat <span>{{beer.Alcoholpercentage}} </span>
+                alcohol percentage. Het <span>{{beer.Bier}} </span>
+                heeft een <span>{{beer.Gisting}} </span> gisting niveau.
+                De Stamwortel gehalte is <span>{{beer.Stamwortgehalte}}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="beer-image" style="background-image:url('../../../../../assets/images/beer-image.jpg')"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

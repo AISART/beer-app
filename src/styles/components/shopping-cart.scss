@@ -1,0 +1,110 @@
+@import '../mixins';
+@import '../variables';
+
+
+.back-button {
+  width: 100%;
+  height: 43px;
+  border-radius: 22px;
+  background: #f98c00;
+  box-shadow: 0 0 1px 0 #FFFFFF inset, 0 0 1px 0 #FFFFFF;
+  text-align: center;
+  max-width: 300px;
+}
+.back-button a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: 43px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 1;
+
+  &:hover {
+    color: $main-gray;
+  }
+}
+.back-button a::before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 130px;
+  height: 100%;
+  content: '';
+  background: #ff9711;
+  border-radius: 22px;
+  z-index: -1;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.back-button:hover a::before {
+  width: 100%;
+}
+
+.shopping-container {
+  background: $main-white;
+  height: 640px;
+  position: relative;
+
+  .beer-image {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 300px;
+  }
+
+  .shopping-content {
+    @include flexbox;
+    @include flex-direction(column);
+
+    .beer-title {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: 700;
+      color: $main-gray;
+      line-height: 1.1;
+
+      &:hover {
+        color: #ff9711;
+      }
+    }
+
+
+    .beer-promile {
+      margin-top: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $main-gray;
+
+      span {
+        color: $main-orange;
+      }
+    }
+
+    .beer-content {
+      margin-top: 22px;
+
+      p {
+        font-weight: 500;
+        color: $main-gray;
+
+        span {
+          color: $main-orange;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

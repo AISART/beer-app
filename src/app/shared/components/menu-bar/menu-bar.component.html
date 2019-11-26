@@ -7,11 +7,12 @@
           </div>
           <nav class="main-nav">
             <ul class="nav-items">
-              <li class="active">
-                <a href="#">Bier overzicht</a>
+              <li routerLinkActive="active">
+                <a [routerLink]="['/beers']">Bier zoeken</a>
               </li>
-              <li>
-                <a href="#">Bestel je bier</a>
+              <li routerLinkActive="active" class="storeLink">
+                <a [routerLink]="['/shopping']">Bestel je bier</a>
+                <span class="qty" *ngIf="cart.length > 0">{{cart.length}}</span>
               </li>
             </ul>
           </nav>
