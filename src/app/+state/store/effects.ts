@@ -13,12 +13,12 @@ export class ShopEffects {
   ) {}
 
   @Effect()
-  loadFruits$ = this.actions$.pipe(
+  loadBeers$ = this.actions$.pipe(
     ofType(ActionTypes.LoadItems),
     mergeMap(() =>
       this.appSettingsService.getJSON().pipe(
-        map(fruits => {
-          return { type: ActionTypes.LoadSuccess, payload: fruits };
+        map(beers => {
+          return { type: ActionTypes.LoadSuccess, payload: beers };
         }),
         catchError(() => EMPTY)
       )
