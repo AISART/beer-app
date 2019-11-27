@@ -26,13 +26,20 @@
             </div>
             <div class="beer-content">
               <p>
-                Bier <span>{{beer.Bier}}</span> en
-                is gebrouwen op <span>{{beer.Sinds}} </span>
-                en verkrijbaar bij <span>{{beer.Brouwerij}}</span>.
+                Bier <span>{{beer.Bier}}</span>
+                <ng-container *ngIf="beer.Sinds">
+                  en is gebrouwen op <span>{{beer.Sinds}} </span>
+                </ng-container>
+                en verkrijgbaar bij <span>{{beer.Brouwerij}}</span>.
                 Dit biertje bevat <span>{{beer.Alcoholpercentage}} </span>
-                alcohol percentage. Het <span>{{beer.Bier}} </span>
-                heeft een <span>{{beer.Gisting}} </span> gisting niveau.
-                De Stamwortel gehalte is <span>{{beer.Stamwortgehalte}}</span>
+                alcohol percentage.
+                <ng-container *ngIf="beer.Gisting">
+                  Het <span>{{beer.Bier}} </span>
+                  heeft een <span>{{beer.Gisting}} </span> gisting niveau.
+                </ng-container>
+                <ng-container *ngIf="beer.Stamwortgehalte">
+                  De Stamwortel gehalte is <span>{{beer.Stamwortgehalte}}</span>
+                </ng-container>
               </p>
             </div>
           </div>
